@@ -1,0 +1,12 @@
+ <!--Allow to use the quote defined in the product-->
+ <!--ATTENTION : a policy verifyAPIKey must be used previously --> 
+ 
+ <Quota async="false" continueOnError="false" enabled="true" type="calendar" xmlns="http://www.sap.com/apimgmt">
+    <Identifier ref="verifyapikey.verifyAPIKey.client_id"/>
+	<Allow countRef="verifyapikey.verifyAPIKey.apiproduct.developer.quota.limit"/>
+ 	<Interval ref="verifyapikey.verifyAPIKey.apiproduct.developer.quota.interval"/>
+    <Distributed>true</Distributed>
+ 	<StartTime>2015-2-11 12:00:00</StartTime>
+	<Synchronous>true</Synchronous>
+ 	<TimeUnit ref="verifyapikey.verifyAPIKey.apiproduct.developer.quota.timeunit"/>
+</Quota>

@@ -1,0 +1,20 @@
+<!-- This policy can be used to create or modify the standard HTTP request and response messages -->
+<AssignMessage async="false" continueOnError="false" enabled="true" xmlns='http://www.sap.com/apimgmt'>
+	<Set>
+		<Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+		    {
+		        "Cause":"Request contain invlaid API Key",
+		        "Resolution" : "Inser valid APIKey in Header"
+		    }
+		</Payload>
+		<StatusCode>911</StatusCode>
+		<ReasonPhrase>Invalid API Key</ReasonPhrase>
+	</Set>
+	<Add>
+        <Headers>
+            <Header name="APIKey">Invalid API key</Header>
+        </Headers>
+    </Add>
+	<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+	<AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

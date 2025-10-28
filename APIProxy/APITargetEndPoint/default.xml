@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndPoint xmlns="http://www.sap.com/apimgmt">
+    <name>default</name>
+    <provider_id>Northwind</provider_id>
+    <additionalAPIProviders/>
+    <isDefault>false</isDefault>
+    <relativePath>/northwind/northwind.svc</relativePath>
+    <properties/>
+    <faultRules/>
+    <preFlow>
+        <name>PreFlow</name>
+    </preFlow>
+    <postFlow>
+        <name>PostFlow</name>
+    </postFlow>
+    <conditionalFlows/>
+    <loadBalancerConfigurations>
+        <isRetry>false</isRetry>
+        <healthMonitor>
+            <isEnabled>false</isEnabled>
+        </healthMonitor>
+    </loadBalancerConfigurations>
+</TargetEndPoint>
